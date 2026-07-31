@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+dotenv
+requests
+mcp[cli]
+fastmcp
+langchain
+langchain-groq
+langchain-mcp-adapters
+langgraph
