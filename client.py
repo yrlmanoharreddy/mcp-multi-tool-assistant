@@ -54,7 +54,7 @@ async def main():
                 }
             )
             answer = response["messages"][-1].content
-            print(f"Error: {answer}")
+            print(f"AI Response: {answer}")
         except Exception as error:
             print(f"Error: {error}")
 

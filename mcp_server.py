@@ -18,7 +18,7 @@ def get_student(student_id: int)->dict:
 
 @mcp.tool()
 def weather(city: str)->dict:
-    """Retrive current weather"""
+    """get weather of any city"""
     return get_weather(city)
 
 if __name__ == "__main__":

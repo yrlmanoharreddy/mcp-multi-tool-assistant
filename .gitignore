@@ -180,3 +180,10 @@ artifacts/
 
 # Keep dependency lock files committed for reproducible builds:
 # uv.lock, poetry.lock, Pipfile.lock, and package-lock.json
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env

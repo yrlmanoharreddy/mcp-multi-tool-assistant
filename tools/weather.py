@@ -2,8 +2,11 @@ import os
 import requests
 from dotenv import load_dotenv
 import json
+from pathlib import Path
 
-load_dotenv("../.env")
+BASE_DIR = Path(__file__).resolve().parent.parent
+env_path = BASE_DIR/".env"
+load_dotenv(env_path)
 OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
 
@@ -31,3 +34,4 @@ def get_weather(city: str):
         return {
             "error" : f"Weather request failed: {error}"
         }
+
