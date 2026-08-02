@@ -2,7 +2,7 @@ fastapi
 uvicorn
 dotenv
 requests
-mcp[cli]
+mcp[cli]>=1.28.1,<2
 fastmcp
 langchain
 langchain-groq

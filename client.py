@@ -3,7 +3,9 @@ import os
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from langchain_mcp_adapters.client import MultiServerMCPClient
-from langgraph.prebuilt import create_react_agent
+# from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
+from mcp.shared.context import RequestContext
 
 async def main():
     load_dotenv()
@@ -27,7 +29,7 @@ async def main():
     for tool in tools:
         print(f"- {tool.name}")
 
-    agent = create_react_agent(
+    agent = create_agent(
         model=llm,
         tools=tools
     )
@@ -41,7 +43,7 @@ async def main():
             continue
 
         try:
-            response = await agent.invoke(
+            response = await agent.ainvoke(
                 {
                     "messages": [
                         {
